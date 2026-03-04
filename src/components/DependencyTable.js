@@ -1,7 +1,4 @@
-import React from 'react';
-import { getHighestSeverityRank } from '../utils.js';
-
-export default function DependencyTable({ dependencies }) {
+function DependencyTable({ dependencies }) {
   const [expanded, setExpanded] = React.useState(null);
 
   return (
@@ -102,5 +99,3 @@ export default function DependencyTable({ dependencies }) {
     </div>
   );
 }
-
-

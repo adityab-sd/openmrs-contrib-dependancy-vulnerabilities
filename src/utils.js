@@ -67,12 +67,3 @@ function getHighestSeverityScore(cves) {
   return scores.length ? Math.max(...scores) : null;
 
 }
-
-// Export functions for testing
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = {
-    normalizeVulnerabilityReport,
-    getHighestSeverityRank,
-    getHighestSeverityScore,
-  };
-}

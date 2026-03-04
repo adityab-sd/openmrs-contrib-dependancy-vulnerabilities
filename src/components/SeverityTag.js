@@ -1,6 +1,4 @@
-import React from 'react';
-
-export default function SeverityTag({ severity }) {
+function SeverityTag({ severity }) {
   //Transform severity to upperCase, since json data has severity label in uppercase
   const normalized = (severity || "LOW").toUpperCase();
   return (

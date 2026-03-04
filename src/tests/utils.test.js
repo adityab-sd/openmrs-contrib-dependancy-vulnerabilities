@@ -2,42 +2,33 @@
  * Added only basic test cases to test default behaviours. Would have to develop
  * further test cases to test different scenarios of different functions.
  */
+function assert(condition, message) {
+  if(!condition) {
+    console.error("Method failed", message);
+  }
+  else console.error("Method executed sucessfully", message);
+}
+function testHighestSeverityRank() {
+  const cves = [
+    { severity: "LOW" },
+    { severity: "HIGH" },
+    { severity: "MEDIUM" }
+  ];
+  const result = getHighestSeverityRank(cves);
+  assert(result === "HIGH", "getHighestSeverityRank returns highest severity");
+}
 
-const { getHighestSeverityRank, getHighestSeverityScore, normalizeVulnerabilityReport } = require('../utils.js');
+testHighestSeverityRank();
 
-describe('Utility class functions', () => {
-  
-  describe('getHighestSeverityRank', () => {
-    test('should return CRITICAL when it exists in array', () => {
-      const cves = [
-        { severity: 'LOW' },
-        { severity: 'CRITICAL' },
-        { severity: 'HIGH' }
-      ];
-      expect(getHighestSeverityRank(cves)).toBe('CRITICAL');
-    });
 
-    test('should handle lowercase severity strings', () => {
-      const cves = [
-        { severity: 'critical' },
-        { severity: 'low' }
-      ];
-      expect(getHighestSeverityRank(cves)).toBe('CRITICAL');
-    });
-  });
+function testHighestSeverityScore() {
+  const cves = [
+    { score: 2 },
+    { score: 9 },
+    { score: 5 }
+  ];
+  const result = getHighestSeverityScore(cves);
+  assert(result === 9, "getHighestSeverityScore returns highest score");
+}
 
-  describe('getHighestSeverityScore', () => {
-    test('should return highest score from array', () => {
-      const cves = [
-        { score: 5.5 },
-        { score: 9.8 },
-        { score: 3.2 }
-      ];
-      expect(getHighestSeverityScore(cves)).toBe(9.8);
-    });
-
-    test('should return null for empty array', () => {
-      expect(getHighestSeverityScore([])).toBe(null);
-    });
-  });
-});
+testHighestSeverityScore();

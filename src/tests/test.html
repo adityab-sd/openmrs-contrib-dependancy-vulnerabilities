@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Component Tests</title>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+</head>
+<body>
+<div id="test-root"></div>
+
+<!--  Load project files -->
+<script type="text/babel" src="../src/utils.js"></script>
+<script type="text/babel" src="../src/components/SeverityTag.js"></script>
+<script type="text/babel" src="../src/components/CVETable.js"></script>
+<script type="text/babel" src="../src/components/DependencyTable.js"></script>
+<script type="text/babel" src="../src/components/RepoSection.js"></script>
+
+<!-- Load test files -->
+<script type="text/babel" src="./CVETable.test.js"></script>
+<script type="text/babel" src="./SeverityTag.test.js"></script>
+<script type="text/babel" src="./RepoSection.test.js"></script>
+<script type="text/babel" src="./DependencyTable.test.js"></script>
+<script type="text/babel" src="./utils.test.js"></script>
+
+</body>
+</html>
