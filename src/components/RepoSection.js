@@ -1,3 +1,13 @@
+import React from 'react';
+import { getHighestSeverityRank, getHighestSeverityScore } from '../utils.js';
+
+const severityRank = {
+  CRITICAL: 4,
+  HIGH: 3,
+  MEDIUM: 2,
+  LOW: 1,
+};
+
 function RepoSection ({ repo }) {
     const [open, setOpen] = React.useState(true);
     const [sortBy, setSortBy] = React.useState("severity");

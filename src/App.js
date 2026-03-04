@@ -1,4 +1,4 @@
-function App() {
+export default function App() {
   const [repos, setRepos] = React.useState([]);
 
   React.useEffect(() => {

@@ -1,5 +1,6 @@
+import React from "react";
 
-function CVETable({ cves }) {
+export default function CVETable({ cves }) {
   return (
     <div className="dep-expanded">
       <table className="cve-table">
@@ -27,15 +28,9 @@ function CVETable({ cves }) {
                 </a>
               </td>
               <td>
-                <span className={`pill ${cve.severity}`}>
-                  {cve.severity}
-                </span>
+                <span className={`pill ${cve.severity}`}>{cve.severity}</span>
               </td>
-              <td>
-                {typeof cve.score === "number"
-                  ? `${cve.score}/10`
-                  : "-"}
-              </td>
+              <td>{typeof cve.score === "number" ? `${cve.score}/10` : "-"}</td>
               <td>{cve.description}</td>
               <td>{cve.affectedVersions || "-"}</td>
               <td>{cve.fixedIn || "-"}</td>
