@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>OpenMRS Dependency Report</title>
+
+  <!--Carbon design -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/carbon-components/css/carbon-components.min.css"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- React -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- Babel -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel" src="src/utils.js"></script>
+  <script type="text/babel" src="src/components/SeverityTag.js"></script>
+  <script type="text/babel" src="src/components/CVETable.js"></script>
+  <script type="text/babel" src="src/components/DependencyTable.js"></script>
+  <script type="text/babel" src="src/components/RepoSection.js"></script>
+  <script type="text/babel" src="src/App.js"></script>
+  
+</body>
+</html>
